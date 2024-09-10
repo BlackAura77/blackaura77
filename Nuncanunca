@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NuncaNunca - Journalist Portfolios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #ff6b6b;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2em auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2em;
+            padding: 0 1em;
+        }
+        .portfolio-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .portfolio-item .content {
+            padding: 1em;
+        }
+        .portfolio-item h2 {
+            margin-top: 0;
+            color: #4a4a4a;
+        }
+        .portfolio-item p {
+            color: #666;
+        }
+        .share-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1em;
+        }
+        .login-section {
+            background-color: white;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 2em auto;
+        }
+        .login-section h2 {
+            margin-top: 0;
+            color: #4a4a4a;
+        }
+        .login-form input {
+            display: block;
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-form button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #ff5252;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NuncaNunca</h1>
+        <p>Showcase Your Journalism Portfolio</p>
+    </header>
+
+    <div class="login-section">
+        <h2>Login or Sign Up</h2>
+        <form class="login-form" id="loginForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="submit">Login / Sign Up</button>
+        </form>
+    </div>
+
+    <main>
+        <div class="portfolio-item">
+            <img src="/api/placeholder/300/200" alt="Article preview">
+            <div class="content">
+                <h2>Breaking News Story</h2>
+                <p>An insightful piece on recent events that shook the nation.</p>
+                <a href="#" class="share-button">Share</a>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="/api/placeholder/300/200" alt="Feature article preview">
+            <div class="content">
+                <h2>In-Depth Feature</h2>
+                <p>A comprehensive look at climate change effects in urban areas.</p>
+                <a href="#" class="share-button">Share</a>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="/api/placeholder/300/200" alt="Interview preview">
+            <div class="content">
+                <h2>Exclusive Interview</h2>
+                <p>One-on-one with a leading tech entrepreneur about AI ethics.</p>
+                <a href="#" class="share-button">Share</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            
+            // Here you would typically send this data to your server
+            console.log('Login attempt:', email, password);
+            alert('Login functionality would be implemented on the server side.');
+            
+            // Clear the form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
